@@ -4,11 +4,11 @@ function Todo(props){
 
     return(
         <div className="to-do-li">
-            <li>
+            <li style={{textDecoration: props.todo.isCompleted ? 'line-through': ''}} >
                 {props.text}
             </li>
             <button onClick={ () => props.completeTodo(props.index)}>Terminé</button>
-            <button >Supprimé</button>
+            <button onClick={ () => props.deleteTodo(props.index)}>Supprimé</button>
         </div>
     )
 }

@@ -19,23 +19,30 @@ export default function TodoIndex(){
         newTodos[index].isCompleted = true;
         setTodos(newTodos);
     };
+    const deleteTodo = index => {
+        const newTodos = [...todos];
+        newTodos.splice(index, 1);
+        setTodos(newTodos);
+    }
     return(
         <Fragment>
             <h1 aria-level="1" role="heading">
-                To Do
+                TO DO LIST
             </h1>
             <section>
                 <h2 aria-level="2" role="heading">
-                    Ma liste
+                    Ma liste :
                 </h2>
                 <ul>
                     {
                         todos.map((todo, index) => (
                             <Todo
+                                todo={todo}
                                 key={index}
                                 text={todo.text}
                                 index={index}
                                 completeTodo={completeTodo}
+                                deleteTodo={deleteTodo}
                             />
                         ))
                     }

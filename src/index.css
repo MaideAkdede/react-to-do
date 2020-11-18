@@ -1,6 +1,16 @@
 body{
-  background-color: lightslategrey;
+  background-color: #232932;
+  color: white;
+  font-family: Avenir, Gotham, Helvetica, "Helvetica Neue", sans-serif;
+  text-align: center;
+  margin: 0 auto;
+}
+h1, h2{
 }
 .to-do-li{
   display: flex;
+  justify-content: center;
+  text-align: left;
+  margin: 0 auto;
+  width: 70vw;
 }
