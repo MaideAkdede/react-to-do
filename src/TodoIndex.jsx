@@ -16,8 +16,13 @@ export default function TodoIndex(){
     ]);
     const completeTodo = index => {
         const newTodos = [...todos];
-        newTodos[index].isCompleted = true;
         setTodos(newTodos);
+
+        if(newTodos[index].isCompleted === false){
+            newTodos[index].isCompleted = true;
+        } else {
+            newTodos[index].isCompleted = false;
+        }
     };
     const deleteTodo = index => {
         const newTodos = [...todos];

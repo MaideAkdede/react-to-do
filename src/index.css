@@ -8,9 +8,65 @@ body{
 h1, h2{
 }
 .to-do-li{
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  hyphens: auto;
+  padding: 0.5rem;
+  background: #7995b8;
+}
+ul{
+  display: inline-block;
+  text-align: left;
+}
+.completed::before{
+  content: "Pas encore terminé";
+}
+.completed{
+  background: #ffa3a3;
+}
+.notCompleted{
+  background: #baffba;
+}
+li{
+  align-self: center;
+  width: 30vw;
+  list-style: none;
+}
+.notCompleted::before{
+  content: "Terminer";
+}
+button{
+  padding: 0.75rem 0.4rem;
+  min-width: 150px;
+  border-radius: 5px;
+  margin-left: 5px;
+  transition-duration: 0.3s;
+  border: none;
+}
+button:hover, input[type=submit]:hover{
+  box-shadow: 3px 3px black;
+  text-decoration: underline;
+  font-weight: bold;
+}
+input[type=submit]{
+  transition-duration: 0.4s;
+}
+input[type=submit]:hover{
+  background: #baffba;
+}
+form{
   display: flex;
   justify-content: center;
-  text-align: left;
-  margin: 0 auto;
-  width: 70vw;
+  flex-wrap: wrap;
+}
+input{
+  padding: 0.75em 2em;
+  border-radius: 5px;
+  border: none;
+  margin: 0.3rem;
+}
+input[type=text]{
+  min-width: 100px;
+  width: 250px;
 }
