@@ -7,7 +7,7 @@ function Todo(props){
             <li>
                 {props.text}
             </li>
-            <button >Terminé</button>
+            <button onClick={ () => props.completeTodo(props.index)}>Terminé</button>
             <button >Supprimé</button>
         </div>
     )

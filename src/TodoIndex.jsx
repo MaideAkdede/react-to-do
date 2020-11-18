@@ -14,6 +14,11 @@ export default function TodoIndex(){
             isCompleted:false,
         }
     ]);
+    const completeTodo = index => {
+        const newTodos = [...todos];
+        newTodos[index].isCompleted = true;
+        setTodos(newTodos);
+    };
     return(
         <Fragment>
             <h1 aria-level="1" role="heading">
@@ -26,7 +31,12 @@ export default function TodoIndex(){
                 <ul>
                     {
                         todos.map((todo, index) => (
-                            <Todo key={index} text={todo.text} index={index} />
+                            <Todo
+                                key={index}
+                                text={todo.text}
+                                index={index}
+                                completeTodo={completeTodo}
+                            />
                         ))
                     }
                 </ul>
